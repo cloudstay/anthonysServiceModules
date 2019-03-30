@@ -16,9 +16,12 @@ server.listen(port, () => {
     console.log(`listening @ http://localhost:${port}`);
 });
 
-server.get('/test', (req, res) => {
-  console.log('message from client: a get request has been made');
-  res.send('message from server: your get request was successful')
+server.get('/api/listings', (req, res) => {
+  console.log('a get request has been made');
+  var handleData = (data) => {
+    res.send(data)
+  }
+  db.getData(handleData);
 });
 
 //create routes here
