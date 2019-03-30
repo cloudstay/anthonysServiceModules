@@ -183,6 +183,9 @@ var infoSchema = new Schema({
 var InfoModel = mongoose.model('InfoModel', infoSchema );
 
 
+
+//models
+
 var seedData = () => {
     var languages = ['Afrikaans', 'Albanian', 'Amharic', 'Arabic', 'Aramaic', 'Armenian', 'Assamese', 'Aymara', 'Azerbaijani', 'Balochi', 'Bamanankan', 'Bashkort', 'Basque', 'Belarusan', 'Bengali', 'Bhojpuri', 'Bislama', 'Bosnian', 'Brahui', 'Bulgarian', 'Burmese', 'Cantonese', 'Catalan', 'Cebuano', 'Chechen', 'Cherokee', 'Croatian', 'Czech', 'Dakota', 'Danish', 'Dari', 'Dholuo', 'DutchEnglish', 'Esperanto', 'Estonian', 'Éwé', 'Finnish', 'French', 'Georgian', 'German', 'Gikuyu', 'Greek', 'Guarani', 'Gujarati', 'Creole', 'Hausa', 'Hawaiian', 'Hawaiian ', 'Hebrew', 'Hiligaynon', 'Hindi', 'Hungarian', 'Icelandic', 'Igbo', 'Ilocano', 'Indonesian', 'Irish', 'Italian', 'Japanese', 'Jarai', 'Javanese', 'Kabyle', 'Kannada', 'Kashmiri', 'Kazakh', 'Khmer', 'KhoekhoeKorean', 'Kurdish', 'Kyrgyz', 'Lao', 'Latin', 'Latvian', 'Lingala', 'Lithuanian', 'Macedonian', 'Maithili', 'Malagasy', 'Malay ', 'Malayalam', 'Mandarin', 'Marathi', 'Mende', 'Mongolian', 'Nahuatl', 'Navajo', 'Nepali', 'Norwegian', 'Ojibwa', 'Oriya', 'Oromo', 'Pashto', 'Persian', 'Polish', 'Portuguese', 'Punjabi', 'Quechua', 'Romani', 'Romanian', 'Russian', 'Rwanda', 'Samoan', 'Sanskrit', 'SerbianShona', 'Sindhi', 'Sinhala', 'Slovak', 'Slovene', 'Somali', 'Spanish', 'Swahili', 'Swedish', 'Tachelhit', 'Tagalog', 'Tajiki', 'Tamil', 'Tatar', 'Telugu', 'Thai', 'Tibetic', 'Tigrigna', 'Turkish', 'Turkmen', 'Ukrainian', 'Urdu', 'Uyghur', 'Uzbek', 'Vietnamese', 'Warlpiri', 'Welsh', 'Wolof', 'Xhosa', 'Yakut', 'Yiddish', 'Yoruba', 'Yucatec', 'Zapotec', 'Zulu'];
     var roomArrangement = ['Entire Home', 'Private Room'];
@@ -374,9 +377,18 @@ var seedData = () => {
   }
 
 
+getData = (callback) => {
+  InfoModel.find({}, (error, data) => {
+    if (error) {
+      console.log(data);
+    } else {
+      callback(data);
+    }
+  });
+}
 
-
-//create model helpers
 
 //export models
 module.exports.seedData = seedData;
+
+module.exports.getData = getData;
