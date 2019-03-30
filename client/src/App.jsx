@@ -12,7 +12,7 @@ class App extends React.Component {
 
     componentDidMount(){
         $.ajax({
-            url: 'http://localhost:3001/test',
+            url: 'http://localhost:3001/api/listings',
             type: 'GET',
             success: (data) => {
                 console.log(data);
