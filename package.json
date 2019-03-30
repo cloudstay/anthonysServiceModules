@@ -9,9 +9,10 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "react-dev": "webpack -d --watch",
-    "start": "nodemon ./server/index.js"
+    "start": "nodemon ./server/index.js",
+    "seed": "node ./database/dataSeed.js",
+    "test": "jest ./specs/tests.js"
   },
   "dependencies": {
     "babel-core": "^6.26.3",
