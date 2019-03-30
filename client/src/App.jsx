@@ -10,6 +10,16 @@ class App extends React.Component {
         }
     }
 
+    componentDidMount(){
+        $.ajax({
+            url: 'http://localhost:3001/test',
+            type: 'GET',
+            success: (data) => {
+                console.log(data);
+            }
+        })
+    }
+
 
     render(){
         return(
