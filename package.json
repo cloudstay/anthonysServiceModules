@@ -12,7 +12,7 @@
     "react-dev": "webpack -d --watch",
     "start": "nodemon ./server/index.js",
     "seed": "node ./database/dataSeed.js",
-    "test": "jest ./specs/tests.js"
+    "test": "jest"
   },
   "dependencies": {
     "babel-core": "^6.26.3",
