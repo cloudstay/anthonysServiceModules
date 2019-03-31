@@ -16,6 +16,11 @@ server.listen(port, () => {
     console.log(`listening @ http://localhost:${port}`);
 });
 
+
+
+//create routes here
+
+
 server.get('/api/listings', (req, res) => {
   console.log('a get request has been made');
   var handleData = (data) => {
@@ -23,5 +28,3 @@ server.get('/api/listings', (req, res) => {
   }
   db.getData(handleData);
 });
-
-//create routes here
