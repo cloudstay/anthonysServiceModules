@@ -6,7 +6,7 @@ class App extends React.Component {
     constructor(){
         super();
         this.state = {
-
+          allListings: []
         }
     }
 
@@ -15,7 +15,9 @@ class App extends React.Component {
             url: 'http://localhost:3001/api/listings',
             type: 'GET',
             success: (data) => {
-                console.log(data);
+                this.setState({
+                    allListings: data
+                })
             }
         })
     }
@@ -23,7 +25,7 @@ class App extends React.Component {
 
     render(){
         return(
-          <div>test</div>
+          <div>app has rendered</div>
         );
     }
 }
