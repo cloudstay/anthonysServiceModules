@@ -380,7 +380,7 @@ var seedData = () => {
 getData = (callback) => {
   InfoModel.find({}, (error, data) => {
     if (error) {
-      console.log(data);
+      console.log(error);
     } else {
       callback(data);
     }
