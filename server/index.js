@@ -28,3 +28,14 @@ server.get('/api/listings', (req, res) => {
   }
   db.getData(handleData);
 });
+
+
+//test routes 
+
+server.get('/api/testing', (req, res) => {
+  console.log('a get request has been made');
+  var handleData = (data) => {
+    res.send(data)
+  }
+  db.getData(handleData);
+});

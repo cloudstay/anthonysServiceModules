@@ -1,5 +1,5 @@
-// const express = require('express');
-// const supertest = require('supertest');
+const supertest = require('supertest');
+const $ = require('jquery');
 
 // describe('service test', function() {
 //     var app = express();
@@ -19,10 +19,19 @@
 //     });
 // });
 
-
-describe('service test', function() {
-    test('if listing id is a string', (done) => {
-        expect(typeof 'seed.listing_id').toBe('string');
+describe('testing data length with call to api', function() {
+    test('this should pass everytime', (done) => {
+        expect(typeof 'this is a string').toBe('string');
         done();
+      });
+      test('there should be 100 listings exactly', (done) => {
+        $.ajax({
+          url: 'http://localhost:3001/api/testing',
+          type: 'GET',
+          success: (data) => {
+            expect(data.length).toBe(100);
+            done();
+          }
+        });
       });
 });
