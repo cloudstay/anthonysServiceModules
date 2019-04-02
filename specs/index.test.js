@@ -20,17 +20,15 @@ const $ = require('jquery');
 // });
 
 describe('testing data length with call to api', function() {
-    test('this should pass everytime', (done) => {
+    test('this should pass everytime', () => {
         expect(typeof 'this is a string').toBe('string');
-        done();
       });
-      test('there should be 100 listings exactly', (done) => {
+      test('there should be 100 listings exactly', () => {
         $.ajax({
           url: 'http://localhost:3001/api/testing',
           type: 'GET',
           success: (data) => {
             expect(data.length).toBe(100);
-            done();
           }
         });
       });
