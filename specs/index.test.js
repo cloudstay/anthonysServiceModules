@@ -1,5 +1,8 @@
 const supertest = require('supertest');
 const $ = require('jquery');
+import React from "react";
+import {shallow} from "enzyme";
+import App from "../client/src/App.jsx";
 
 // describe('service test', function() {
 //     var app = express();
@@ -112,4 +115,16 @@ describe('testing image urls of a random data listing to have legitimate endpoin
         }
       });
     });
+});
+
+
+/////////////////////////////////////////////////////////////////
+////////////////////ENZYME TESTS/////////////////////////////////
+/////////////////////////////////////////////////////////////////
+
+describe('Should render main App component', ()=> {
+  it("should render without error", () => {
+    const wrapper = shallow(<App />);
+    expect((wrapper).exists()).toBe(true);
+  });
 });
