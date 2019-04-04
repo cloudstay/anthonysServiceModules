@@ -1,4 +1,5 @@
 import React from 'react';
+import Listing from './Listing.jsx';
 
 class RelatedHomes extends React.Component {
   constructor(props){
@@ -9,8 +10,14 @@ class RelatedHomes extends React.Component {
 }
 
     render(){
+      var relatedListings = this.props.relatedListings.map((listing) => {
+        return <Listing key={listing.listingId} listingImg={listing.listingImg} roomArrangement={listing.roomArrangement} listingTitle={listing.listingTitle} nightlyPrice={listing.nightlyPrice} reviewAvg={listing.reviewAvg} numOfReviews={listing.numOfReviews}/>
+      })
       return(
-        <div>RelatedHomes</div>
+        <div>
+          <h2>More homes you may like</h2>
+          <ol>{relatedListings}</ol>
+        </div>
       )
     }
 }
