@@ -10,7 +10,9 @@ class Explore extends React.Component {
 
     render(){
       return(
-        <div>Explore</div>
+        <div>
+          <div>Explore more places in and around {this.props.city}</div>
+        </div>
       )
     }
 }
