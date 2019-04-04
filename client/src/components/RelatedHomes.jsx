@@ -10,13 +10,13 @@ class RelatedHomes extends React.Component {
 }
 
     render(){
-      var relatedListings = this.props.relatedListings.map((listing) => {
+      var listings = this.props.listings.map((listing) => {
         return <Listing key={listing.listingId} listingImg={listing.listingImg} roomArrangement={listing.roomArrangement} listingTitle={listing.listingTitle} nightlyPrice={listing.nightlyPrice} reviewAvg={listing.reviewAvg} numOfReviews={listing.numOfReviews}/>
       })
       return(
         <div>
           <h2>More homes you may like</h2>
-          <ol>{relatedListings}</ol>
+          <ol>{listings}</ol>
         </div>
       )
     }
