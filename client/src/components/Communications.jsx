@@ -10,7 +10,9 @@ class Communications extends React.Component {
 
     render(){
       return(
-        <div>Communications</div>
+        <div>
+          <p>Always communicate through CloudStay to protect payment... etc (learn more button here)</p>
+        </div>
       )
     }
 }
