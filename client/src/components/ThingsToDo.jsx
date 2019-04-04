@@ -10,8 +10,8 @@ class ThingsToDo extends React.Component {
 }
 
     render(){
-      var thingsToDo = this.props.thingsToDo.map((event) => {
-        return <Event eventImg={event.eventImg} eventCategory={event.eventCategory} eventName={event.eventName} price={event.price} ratingAvg={event.ratingAvg} numOfRatings={event.numOfRatings}/>
+      var thingsToDo = this.props.thingsToDo.map((event, index) => {
+        return <Event key={index} eventImg={event.eventImg} eventCategory={event.eventCategory} eventName={event.eventName} price={event.price} ratingAvg={event.ratingAvg} numOfRatings={event.numOfRatings}/>
       })
       return(
         <div>
