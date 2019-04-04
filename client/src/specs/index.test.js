@@ -11,8 +11,8 @@ import RelatedHomes from '../components/RelatedHomes.jsx';
 import ThingsToDo from '../components/ThingsToDo.jsx';
 import Explore from '../components/Explore.jsx';
 
-// import Listing from '../components/Listing.jsx';
-// import Event from '../components/Event.jsx';
+import Listing from '../components/Listing.jsx';
+import Event from '../components/Event.jsx';
 
 
 describe('render main app component to the DOM', () => {
@@ -43,16 +43,24 @@ describe('render all imported components within main App component', () => {
       const wrapper = shallow(<Cancelations/>);
       expect(wrapper.exists()).toBe(true);
     });
-    // test("should pass if RelatedHomes component renders", () => {
-    //   const wrapper = shallow(<RelatedHomes/>);
-    //   expect(wrapper.exists()).toBe(true);
-    // });
-    // test("should pass if ThingsToDo component renders", () => {
-    //   const wrapper = shallow(<ThingsToDo/>);
-    //   expect(wrapper.exists()).toBe(true);
-    // });
+    test("should pass if RelatedHomes component renders", () => {
+      const wrapper = shallow(<RelatedHomes listings={[]}/>);
+      expect(wrapper.exists()).toBe(true);
+    });
+    test("should pass if ThingsToDo component renders", () => {
+      const wrapper = shallow(<ThingsToDo thingsToDo={[]}/>);
+      expect(wrapper.exists()).toBe(true);
+    });
     test("should pass if Explore component renders", () => {
       const wrapper = shallow(<Explore/>);
+      expect(wrapper.exists()).toBe(true);
+    });
+    test("should pass if Listing component renders", () => {
+      const wrapper = shallow(<Listing listingImg={''} roomArrangement={''} listingTitle={''} nightlyPrice={0} reviewAvg={0} numOfReviews={0}/>);
+      expect(wrapper.exists()).toBe(true);
+    });
+    test("should pass if Event component renders", () => {
+      const wrapper = shallow(<Event eventImg={''} eventCategory={''} eventName={''} price={0} ratingAvg={0} numOfRatings={0}/>);
       expect(wrapper.exists()).toBe(true);
     });
 });
