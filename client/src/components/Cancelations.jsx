@@ -10,7 +10,12 @@ class Cancelations extends React.Component {
 
     render(){
       return(
-        <div>Cancelations</div>
+        <div>
+          <h1>Cancelations</h1>
+          <div>{this.props.policyDiagram}</div>
+          <div>show more button here</div>
+          <div>get more details button here</div>
+        </div>
       )
     }
 }
