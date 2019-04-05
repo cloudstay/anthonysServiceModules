@@ -2,8 +2,17 @@
 
 body {
     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+    display: inline;
     height: 1290px;
     width: 648px;
+    font-size: 15px;
+    color: #484848;
+    font-weight: 350;
+    line-height: 1.50em;
+    display: table-cell;
+    width: 100%;
+    padding-left: 16px;
+    vertical-align: top;
 }
 
 /* between components */
@@ -19,27 +28,74 @@ body {
 
 /* individual pieces */
 
+/* hostedby component */
+
 #hostedByHostName {
     display: inline;
+    color: #3a3a3a;
     font-size: 24px;
     font-weight: 600;
     line-height: 1.25em;
-    color: #484848;
     padding-top: 2px;
     padding-bottom: 2px;
 }
-
-/* together */
 
 .container {
     display: flex;
     margin: auto;
 }
 
+.hostedBySideSpacingOne {
+    padding-right: 6px;
+}
 
-.hostedBySpaced {
-    padding-top: 0px;
-    padding-right: 5px;
+.hostedBySideSpacingTwo {
+    padding-left: 4px;
+    padding-right: 6px;
+}
+
+.hostedByVerticalSpacing {
     padding-bottom: 4px;
-    padding-left: 3px;
-  }
+    padding-top: 4px;
+}
+
+
+#hostedByContactHostButton {
+    color: teal;
+    background: transparent;
+    border: 1px solid teal;
+    border-radius: 6px;
+    cursor: pointer;
+    outline-style: none;
+    box-shadow: none;
+}
+
+#hostedByInfo {
+    margin-top: 16px;
+    word-wrap: break-word;
+    line-height: 1.375em;
+}
+
+#star {
+    height: 18px;
+    width:18px;
+    display: inline-block;
+    margin-left: 12px;
+    margin-right: 6px;
+    background-image: url('../images/star.svg');
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+ }
+
+ #check {
+    height: 25px;
+    width:25px;
+    display: inline-block;
+    margin-left: 12px;
+    margin-right: 6px;
+    background-image: url('../images/checkmark.svg');
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+ }
