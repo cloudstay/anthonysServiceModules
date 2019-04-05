@@ -22,31 +22,33 @@ class HostedBy extends React.Component {
     render(){
       if (this.props.isVerified){
         return(
-          <div>
+          <div >
             <div className='line-break'></div>
-            <h2 id='hostedByHostName'>Hosted By {this.props.hostName}</h2>
-            <div className='container'><div id='hostedByCity' className='hostedBySpaced'>{this.props.city}</div><div>·</div><div id='hostedByMemberSince' className='hostedBySpaced'>Joined <Moment fromNow>{this.props.memberSince}</Moment></div></div>
-            <div className='container'><div id='hostedByNumOfReviews' className='hostedBySpaced'>{this.props.numOfReviews} Reviews</div><div id='hostedByIsVerified' className='hostedBySpaced'></div>Verified!</div>
-            <p id='hostedByHostInfo'>{this.props.hostInfo}</p>
-            <div id='hostedByLanguages'>Languages: <strong>{this.props.languages}</strong></div>
-            <div id='hostedByResponseRate'>Response rate: <strong>{this.props.responseRate}%</strong></div>
-            <div id='hostedByResponseTime'>Response time: <strong>within {this.props.responseTime} hours</strong></div>
-            <button id='hostedByContactHost'>Contact host</button>
+            <h2 id='hostedByHostName'>Hosted by {this.props.hostName}</h2>
+            <div id='hostedByDetails'>
+              <div className='container'><div className='hostedByVerticalSpacing' className='hostedBySideSpacingOne'>{this.props.city}</div><div>·</div><div className='hostedByVerticalSpacing' className='hostedBySideSpacingTwo'>Joined <Moment fromNow>{this.props.memberSince}</Moment></div></div>
+              <div className='container'><div id='star'></div><div className='hostedByVerticalSpacing' className='hostedBySideSpacingOne'>{this.props.numOfReviews} Reviews</div><div id='check'></div><div className='hostedByVerticalSpacing' className='hostedBySideSpacingTwo'>Verified</div></div>
+              <p className='hostedByVerticalSpacing' id='hostedByInfo'>{this.props.hostInfo}</p>
+              <div className='hostedByVerticalSpacing'>Languages: <strong>{this.props.languages}</strong></div>
+              <div className='hostedByVerticalSpacing'>Response rate: <strong>{this.props.responseRate}%</strong></div>
+              <div className='hostedByVerticalSpacing'>Response time: <strong>within {this.props.responseTime} hours</strong></div>
+            </div>
+            <button id='hostedByContactHostButton' className='hostedByVerticalSpacing'><strong>Contact host</strong></button>
             <div className='line-break'></div>
           </div>
         )
       } else {
         return (
-          <div>
+          <div >
             <div className='line-break'></div>
-            <h2 id='hostedByHostName'>Hosted By {this.props.hostName}</h2>
-            <div className='container'><div id='hostedByCity' className='hostedBySpaced'>{this.props.city}</div><div>·</div><div id='hostedByMemberSince' className='hostedBySpaced'>Joined <Moment fromNow>{this.props.memberSince}</Moment></div></div>
-            <div className='container'><div id='hostedByNumOfReviews' className='hostedBySpaced'>{this.props.numOfReviews} Reviews</div><div id='hostedByIsVerified' className='hostedBySpaced'></div></div>
-            <p id='hostedByHostInfo'>{this.props.hostInfo}</p>
-            <div id='hostedByLanguages'>Languages: <strong>{this.props.languages}</strong></div>
-            <div id='hostedByResponseRate'>Response rate: <strong>{this.props.responseRate}%</strong></div>
-            <div id='hostedByResponseTime'>Response time: <strong>within {this.props.responseTime} hours</strong></div>
-            <button id='hostedByContactHostButton'>Contact host</button>
+            <h2 id='hostedByHostName'>Hosted by {this.props.hostName}</h2>
+            <div className='container'><div className='hostedByVerticalSpacing' className='hostedBySideSpacingOne'>{this.props.city}</div><div>·</div><div className='hostedByVerticalSpacing' className='hostedBySideSpacingTwo'>Joined <Moment fromNow>{this.props.memberSince}</Moment></div></div>
+            <div className='container'><div id='star'></div><div className='hostedByVerticalSpacing' className='hostedBySideSpacingOne'>{this.props.numOfReviews} Reviews</div><div className='hostedByVerticalSpacing' className='hostedBySideSpacingTwo'></div></div>
+            <p className='hostedByVerticalSpacing' id='hostedByInfo'>{this.props.hostInfo}</p>
+            <div className='hostedByVerticalSpacing'>Languages: <strong>{this.props.languages}</strong></div>
+            <div className='hostedByVerticalSpacing'>Response rate: <strong>{this.props.responseRate}%</strong></div>
+            <div className='hostedByVerticalSpacing'>Response time: <strong>within {this.props.responseTime} hours</strong></div>
+            <button id='hostedByContactHostButton' className='hostedByVerticalSpacing'><strong>Contact host</strong></button>
             <div className='line-break'></div>
           </div>
       )
