@@ -25,7 +25,7 @@ class HostedBy extends React.Component {
           <div>
             <div className='line-break'></div>
             <h2 id='hostedByHostName'>Hosted By {this.props.hostName}</h2>
-            <div className='container'><div id='hostedByCity' className='hostedBySpaced'>{this.props.city}</div><div>·</div><div id='hostedByMemberSince' className='hostedBySpaced'>Joined on {this.props.memberSince}</div></div>
+            <div className='container'><div id='hostedByCity' className='hostedBySpaced'>{this.props.city}</div><div>·</div><div id='hostedByMemberSince' className='hostedBySpaced'>Joined <Moment fromNow>{this.props.memberSince}</Moment></div></div>
             <div className='container'><div id='hostedByNumOfReviews' className='hostedBySpaced'>{this.props.numOfReviews} Reviews</div><div id='hostedByIsVerified' className='hostedBySpaced'></div>Verified!</div>
             <p id='hostedByHostInfo'>{this.props.hostInfo}</p>
             <div id='hostedByLanguages'>Languages: <strong>{this.props.languages}</strong></div>
@@ -40,7 +40,7 @@ class HostedBy extends React.Component {
           <div>
             <div className='line-break'></div>
             <h2 id='hostedByHostName'>Hosted By {this.props.hostName}</h2>
-            <div className='container'><div id='hostedByCity' className='hostedBySpaced'>{this.props.city}</div><div>·</div><div id='hostedByMemberSince' className='hostedBySpaced'>Joined on {this.props.memberSince}</div></div>
+            <div className='container'><div id='hostedByCity' className='hostedBySpaced'>{this.props.city}</div><div>·</div><div id='hostedByMemberSince' className='hostedBySpaced'>Joined <Moment fromNow>{this.props.memberSince}</Moment></div></div>
             <div className='container'><div id='hostedByNumOfReviews' className='hostedBySpaced'>{this.props.numOfReviews} Reviews</div><div id='hostedByIsVerified' className='hostedBySpaced'></div></div>
             <p id='hostedByHostInfo'>{this.props.hostInfo}</p>
             <div id='hostedByLanguages'>Languages: <strong>{this.props.languages}</strong></div>
