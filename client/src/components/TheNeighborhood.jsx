@@ -27,6 +27,7 @@ togglePanel(){
           <div>
             <div className='line-break'></div>
             <h2>The Neighborhood</h2>
+            <div>{this.props.city}</div>
             <div>
               <p>{this.props.neighborhoodInfo}</p>
             </div>
@@ -51,6 +52,7 @@ togglePanel(){
           <div>
             <div className='line-break'></div>
             <h2>The Neighborhood</h2>
+            <div>{this.props.city}</div>
             <div className='hostedByVerticalSpacing' onClick={() => {this.togglePanel()}}>
               <a className="link"><strong>Read more about the neighborhood</strong></a><div id='down'></div>
             </div>
@@ -70,13 +72,6 @@ togglePanel(){
       }
     }
 }
-
-
-//city for map use prop
-// {this.props.city}
-
-
-// export default TheNeighborhood;
 
 export default GoogleApiWrapper({
   apiKey: (apiKey)
