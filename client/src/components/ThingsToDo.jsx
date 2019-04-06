@@ -15,7 +15,7 @@ class ThingsToDo extends React.Component {
       })
       return(
         <div>
-          <h1>Things to do near this home!</h1>
+          <h2>Things to do near this home</h2>
           <ol>{thingsToDo}</ol>
         </div>
       )
