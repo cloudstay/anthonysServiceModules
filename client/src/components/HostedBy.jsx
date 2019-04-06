@@ -26,7 +26,7 @@ class HostedBy extends React.Component {
             <div className='line-break'></div>
             <h2 id='hostedByHostName'>Hosted by {this.props.hostName}</h2>
             <div id='hostedByDetails'>
-              <div className='container'><div className='hostedByVerticalSpacing' className='hostedBySideSpacingOne'>{this.props.city}</div><div>·</div><div className='hostedByVerticalSpacing' className='hostedBySideSpacingTwo'>Joined <Moment fromNow>{this.props.memberSince}</Moment></div></div>
+              <div className='hostedByVerticalSpacing'>{this.props.city} · Joined <Moment fromNow>{this.props.memberSince}</Moment></div>
               <div className='container'><div id='star'></div><div className='hostedByVerticalSpacing' className='hostedBySideSpacingOne'>{this.props.numOfReviews} Reviews</div><div id='check'></div><div className='hostedByVerticalSpacing' className='hostedBySideSpacingTwo'>Verified</div></div>
               <p className='hostedByVerticalSpacing'>{this.props.hostInfo}</p>
               <div className='hostedByVerticalSpacing'>Languages: <strong>{this.props.languages}</strong></div>
@@ -42,12 +42,14 @@ class HostedBy extends React.Component {
           <div >
             <div className='line-break'></div>
             <h2 id='hostedByHostName'>Hosted by {this.props.hostName}</h2>
-            <div className='container'><div className='hostedByVerticalSpacing' className='hostedBySideSpacingOne'>{this.props.city}</div><div>·</div><div className='hostedByVerticalSpacing' className='hostedBySideSpacingTwo'>Joined <Moment fromNow>{this.props.memberSince}</Moment></div></div>
-            <div className='container'><div id='star'></div><div className='hostedByVerticalSpacing' className='hostedBySideSpacingOne'>{this.props.numOfReviews} Reviews</div><div className='hostedByVerticalSpacing' className='hostedBySideSpacingTwo'></div></div>
-            <p className='hostedByVerticalSpacing'>{this.props.hostInfo}</p>
-            <div className='hostedByVerticalSpacing'>Languages: <strong>{this.props.languages}</strong></div>
-            <div className='hostedByVerticalSpacing'>Response rate: <strong>{this.props.responseRate}%</strong></div>
-            <div className='hostedByVerticalSpacing'>Response time: <strong>within {this.props.responseTime} hours</strong></div>
+            <div id='hostedByDetails'>
+              <div className='hostedByVerticalSpacing'>{this.props.city} · Joined <Moment fromNow>{this.props.memberSince}</Moment></div>
+              <div className='container'><div id='star'></div><div className='hostedByVerticalSpacing' className='hostedBySideSpacingOne'>{this.props.numOfReviews} Reviews</div><div id='check'></div><div className='hostedByVerticalSpacing' className='hostedBySideSpacingTwo'></div></div>
+              <p className='hostedByVerticalSpacing'>{this.props.hostInfo}</p>
+              <div className='hostedByVerticalSpacing'>Languages: <strong>{this.props.languages}</strong></div>
+              <div className='hostedByVerticalSpacing'>Response rate: <strong>{this.props.responseRate}%</strong></div>
+              <div className='hostedByVerticalSpacing'>Response time: <strong>within {this.props.responseTime} hours</strong></div>
+            </div>
             <button id='hostedByContactHostButton' className='hostedByVerticalSpacing'><strong>Contact host</strong></button>
             <div className='line-break'></div>
           </div>
