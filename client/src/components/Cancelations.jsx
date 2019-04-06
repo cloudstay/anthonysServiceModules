@@ -37,7 +37,7 @@ togglePanel(){
       } else {
         return(
           <div>
-            <h3>Cancellations</h3>
+            <h2>Cancellations</h2>
             <div>
             </div>
             <div className='hostedByVerticalSpacing' onClick={() => {this.togglePanel()}}>
