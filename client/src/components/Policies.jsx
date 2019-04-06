@@ -4,22 +4,46 @@ class Policies extends React.Component {
   constructor(props){
     super(props)
     this.state = {
+      showPanel: false
 
     }
+    this.togglePanel = this.togglePanel.bind(this);
+}
+
+togglePanel(){
+  this.setState({
+    showPanel: this.state.showPanel ? false : true
+  })
 }
 
     render(){
-      return(
-        <div>
-          <h1>Policies</h1>
-          <h3>House Rules</h3>
-          <div>Self Check In: {JSON.stringify(this.props.selfCheckIn)}</div><div>{this.props.checkInTime}</div>
-          <div>{JSON.stringify(this.props.smoking)}</div><div>{JSON.stringify(this.props.parties)}</div>
-          <div>{JSON.stringify(this.props.pets)}</div>
-          <div>{JSON.stringify(this.props.securityDeposit)}</div><div>{this.props.depositAmount}</div>
-          <div>Expand policies button</div>
-        </div>
-      )
+      if (this.state.showPanel){
+        return(
+          <div>
+            <h2>Policies</h2>
+            <h3>House Rules</h3>
+            <div>Self Check In: {this.props.selfCheckIn ? 'Yes' : 'No'}</div><div>Check in Time: {this.props.checkInTime + 'pm'}</div>
+            <div>Smoking: {this.props.smoking ? 'Yes' : 'No'}</div><div>Parties: {this.props.parties ? 'Yes' : 'No'}</div>
+            <div>Pets: {this.props.pets ? 'Yes' : 'No'}</div>
+            <div>Security Deposit: {this.props.securityDeposit ? 'Yes' : 'No'}</div><div>Deposit Amount: {this.props.securityDeposit ? '$' + this.props.depositAmount : '$0'}</div>
+            <div className='hostedByVerticalSpacing' onClick={() => {this.togglePanel()}}>
+              <a className="link"><strong>Hide rules</strong></a><div id='up'></div>
+            </div>
+            <div className='line-break'></div>
+          </div>
+        )
+      } else {
+        return(
+          <div>
+            <h2>Policies</h2>
+            <h3>House Rules</h3>
+            <div className='hostedByVerticalSpacing' onClick={() => {this.togglePanel()}}>
+              <a className="link"><strong>Read all rules</strong></a><div id='down'></div>
+            </div>
+            <div className='line-break'></div>
+          </div>
+        )
+      }
     }
 }
 
