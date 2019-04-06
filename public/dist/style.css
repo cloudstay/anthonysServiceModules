@@ -1,21 +1,29 @@
-/* for entire page */
+/* for entire page and reusable styles */
+
 
 body {
     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
     display: inline;
-    height: 1290px;
-    width: 648px;
     font-size: 15px;
     color: #484848;
     font-weight: 350;
     line-height: 1.50em;
     display: table-cell;
-    width: 100%;
-    padding-left: 16px;
+    padding-left: 140px;
+    padding-right: 140px;
     vertical-align: top;
 }
 
-/* between components */
+.container {
+    display: flex;
+    margin: auto;
+}
+
+p {
+    margin-top: 16px;
+    word-wrap: break-word;
+    line-height: 1.375em;
+}
 
 .line-break {
     content: " ";
@@ -26,7 +34,17 @@ body {
     margin-bottom: 30px;
   }
 
-/* individual pieces */
+
+
+a.link {
+color: teal;
+}
+
+a.link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 
 /* hostedby component */
 
@@ -38,11 +56,6 @@ body {
     line-height: 1.25em;
     padding-top: 2px;
     padding-bottom: 2px;
-}
-
-.container {
-    display: flex;
-    margin: auto;
 }
 
 .hostedBySideSpacingOne {
@@ -59,7 +72,6 @@ body {
     padding-top: 4px;
 }
 
-
 #hostedByContactHostButton {
     color: teal;
     background: transparent;
@@ -68,12 +80,6 @@ body {
     cursor: pointer;
     outline-style: none;
     box-shadow: none;
-}
-
-#hostedByInfo {
-    margin-top: 16px;
-    word-wrap: break-word;
-    line-height: 1.375em;
 }
 
 #star {
@@ -99,3 +105,11 @@ body {
     background-position-y: 50%;
     background-repeat: no-repeat;
  }
+
+/* the neighborhood component */
+
+#map {
+    position: relative;
+    width: 640px;
+    height: 380px;
+  }
