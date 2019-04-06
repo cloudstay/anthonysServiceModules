@@ -22,10 +22,13 @@ togglePanel(){
           <div>
             <h2>Policies</h2>
             <h3>House Rules</h3>
-            <div>Self Check In: {this.props.selfCheckIn ? 'Yes' : 'No'}</div><div>Check in Time: {this.props.checkInTime + 'pm'}</div>
-            <div>Smoking: {this.props.smoking ? 'Yes' : 'No'}</div><div>Parties: {this.props.parties ? 'Yes' : 'No'}</div>
+            <div>Check in Time: {this.props.checkInTime + 'pm'}</div>
+            <div>Self Check In: {this.props.selfCheckIn ? 'Yes' : 'No'}</div>
+            <div>Smoking: {this.props.smoking ? 'Yes' : 'No'}</div>
+            <div>Parties: {this.props.parties ? 'Yes' : 'No'}</div>
             <div>Pets: {this.props.pets ? 'Yes' : 'No'}</div>
-            <div>Security Deposit: {this.props.securityDeposit ? 'Yes' : 'No'}</div><div>Deposit Amount: {this.props.securityDeposit ? '$' + this.props.depositAmount : '$0'}</div>
+            <div>Security Deposit: {this.props.securityDeposit ? 'Yes' : 'No'}</div>
+            <div>Deposit Amount: {this.props.securityDeposit ? '$' + this.props.depositAmount : '$0'}</div>
             <div className='hostedByVerticalSpacing' onClick={() => {this.togglePanel()}}>
               <a className="link"><strong>Hide rules</strong></a><div id='up'></div>
             </div>
@@ -37,6 +40,8 @@ togglePanel(){
           <div>
             <h2>Policies</h2>
             <h3>House Rules</h3>
+            <div>Check in Time: {this.props.checkInTime + 'pm'}</div>
+            <div>Self Check In: {this.props.selfCheckIn ? 'Yes' : 'No'}</div>
             <div className='hostedByVerticalSpacing' onClick={() => {this.togglePanel()}}>
               <a className="link"><strong>Read all rules</strong></a><div id='down'></div>
             </div>
