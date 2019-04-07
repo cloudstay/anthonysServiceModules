@@ -10,12 +10,16 @@ class Event extends React.Component {
 
     render(){
       return(
-        <div>
-          <div>{this.props.eventImg}</div>
-          <div>{this.props.eventCategory}</div>
-          <div>{this.props.eventName}</div>
-          <div>{this.props.price}</div>
-          <div>{this.props.ratingAvg}</div><div>{this.props.numOfRatings}</div>
+        <div id='eventContainer'>
+          <div id='listingImgContainer'><img className='listingImg' src={this.props.eventImg}></img></div>
+          <div id='eventInfoContainer'>
+            <div><span id='eventType'><strong>{(this.props.eventCategory).toUpperCase()}</strong></span></div>
+            <div><strong>{this.props.eventName}</strong></div>
+            <div><span id='pricing'>{'$' + this.props.price + ' per person'}</span></div>
+            <div>
+              <div><span id='reviewsAvg'><strong>{this.props.ratingAvg}</strong></span><span id='carouselStar'></span><span id='reviews'>{' (' + this.props.numOfRatings + ') '}</span></div>
+            </div>
+          </div>
         </div>
       )
     }
