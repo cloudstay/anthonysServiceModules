@@ -24,9 +24,16 @@ class HostedBy extends React.Component {
         return(
           <div >
             <div className='line-break'></div>
-            <h2 id='hostedByHostName'>Hosted by {this.props.hostName}</h2>
+            <div id='hostInfoHeaderContainer'>
+            <div id='headingContainer'>
+                <h2 id='hostedByHostName'>Hosted by {this.props.hostName}</h2>
+                <div className='hostedByVerticalSpacing'>{this.props.city} · Joined <Moment fromNow>{this.props.memberSince}</Moment></div>
+              </div>
+              <div id='hostImageContainer'>
+                <div><img id='hostImage' src={this.props.hostImage}></img></div>
+              </div>
+            </div>
             <div id='hostedByDetails'>
-              <div className='hostedByVerticalSpacing'>{this.props.city} · Joined <Moment fromNow>{this.props.memberSince}</Moment></div>
               <div className='container'><span id='star'></span><div className='hostedByVerticalSpacing' className='hostedBySideSpacingOne'>{this.props.numOfReviews} Reviews</div><span id='check'></span><div className='hostedByVerticalSpacing' className='hostedBySideSpacingTwo'>Verified</div></div>
               <p className='hostedByVerticalSpacing'>{this.props.hostInfo}</p>
               <div className='hostedByVerticalSpacing'>Languages: <strong>{this.props.languages}</strong></div>
@@ -41,9 +48,16 @@ class HostedBy extends React.Component {
         return (
           <div >
             <div className='line-break'></div>
-            <h2 id='hostedByHostName'>Hosted by {this.props.hostName}</h2>
+            <div id='hostInfoHeaderContainer'>
+              <div id='headingContainer'>
+                <h2 id='hostedByHostName'>Hosted by {this.props.hostName}</h2>
+                <div className='hostedByVerticalSpacing'>{this.props.city} · Joined <Moment fromNow>{this.props.memberSince}</Moment></div>
+              </div>
+              <div id='hostImageContainer'>
+              <div><img id='hostImage' src={this.props.hostImage}></img></div>
+              </div>
+            </div>
             <div id='hostedByDetails'>
-              <div className='hostedByVerticalSpacing'>{this.props.city} · Joined <Moment fromNow>{this.props.memberSince}</Moment></div>
               <div className='container'><span id='star'></span><div className='hostedByVerticalSpacing' className='hostedBySideSpacingOne'>{this.props.numOfReviews} Reviews</div><div></div><div className='hostedByVerticalSpacing' className='hostedBySideSpacingTwo'></div></div>
               <p className='hostedByVerticalSpacing'>{this.props.hostInfo}</p>
               <div className='hostedByVerticalSpacing'>Languages: <strong>{this.props.languages}</strong></div>
