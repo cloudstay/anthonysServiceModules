@@ -13,6 +13,7 @@ var Schema = mongoose.Schema;
 var infoSchema = new Schema({
   listing_id: Number,
   hostName: String,
+  hostImage: String,
   city: String,
   memberSince: String,
   numOfReviews: Number,
@@ -193,6 +194,7 @@ var seedData = () => {
       InfoModel.create({
         listing_id: i,
         hostName: faker.name.firstName(),
+        hostImage: `https://s3.us-east-2.amazonaws.com/fecheadshots/${Math.floor(Math.random() * Math.floor(25)) + 1}.jpg`,
         city: faker.address.city(),
         memberSince: faker.date.past(),
         numOfReviews: Math.floor(Math.random() * Math.floor(500)),
