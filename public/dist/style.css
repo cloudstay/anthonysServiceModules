@@ -9,8 +9,8 @@ body {
     font-weight: 350;
     line-height: 1.50em;
     display: table-cell;
-    padding-left: 140px;
-    padding-right: 140px;
+    padding-left: 120px;
+    padding-right: 120px;
     vertical-align: top;
 }
 
@@ -26,13 +26,26 @@ p {
     font-weight: 300;
     line-height: 1.375em;
     color: #484848;
+    position: relative;
+    width: 640px;
 }
 
 .line-break {
     content: " ";
     background-color: rgb(236, 234, 234);
+    width: 640px;
+    height: 1px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .line-break-long {
+    content: " ";
+    background-color: rgb(236, 234, 234);
     width: 100%;
     height: 1px;
+    margin-left: 0px;
+    margin-right: 0px;
     margin-top: 30px;
     margin-bottom: 30px;
   }
@@ -251,6 +264,7 @@ a.linkExplore:hover {
 #containerAndArrows {
     display: flex;
     position: relative;
+    padding-left: 0px;
 }
 
 #leftArrowContainer {
@@ -317,3 +331,43 @@ a.linkExplore:hover {
 #reviewsAvg {
     font-size: 12px;
 }
+
+
+/* hostedby image handling */
+
+#hostInfoHeaderContainer {
+    display: flex;
+    width: 640px;
+}
+
+#hostImageContainer {
+    /* height: 64px;
+    width: 64px; */
+    display: block;
+    position:relative;
+    margin:0 auto;
+    padding-left: 240px;
+}
+
+#hostImage {
+    height: 64px;
+    width: 64px;
+    background: transparent;
+    border: 0px;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+    background-color: #D8D8D8;
+    border-radius: 50%;
+    border-width:  2px;
+    border-color: #ffffff;
+    background-color: #D8D8D8;
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ffffff ;
+    /* vertical-align: middle ; */
+    overflow: hidden;
+    display: block;
+}
+
