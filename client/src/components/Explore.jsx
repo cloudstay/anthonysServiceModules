@@ -44,7 +44,6 @@ class Explore extends React.Component {
             <div className='exploreHorizontalSpacing'><a className="linkExplore">{faker.address.city()}</a></div>
             <div className='exploreHorizontalSpacing'><a className="linkExplore">{faker.address.city()}</a></div>
           </div>
-          <div className='line-break'></div>
         </div>
       )
     }
