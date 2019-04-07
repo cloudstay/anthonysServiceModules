@@ -213,6 +213,10 @@ a.linkExplore:hover {
     font-size: 12px;
     font-weight: 500;
    }
+
+#listingContainer {
+    cursor: pointer;
+}
   
 /* event component */
 
@@ -223,6 +227,9 @@ a.linkExplore:hover {
     font-weight: 500;
    }
 
+#eventContainer {
+    cursor: pointer;
+}
 
 /* carousel */
 
