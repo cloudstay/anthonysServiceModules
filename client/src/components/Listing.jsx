@@ -13,7 +13,7 @@ class Listing extends React.Component {
         <div id='listingContainer'>
           <div id='listingImgContainer'><img className='listingImg' src={this.props.listingImg}></img></div>
           <div id='listingInfoContainer'>
-          <div><span id='listingType'><strong>{(this.props.roomArrangement).toUpperCase() + ' · ' + (this.props.city).toUpperCase()}</strong></span></div>
+          <div><span id='listingType'><strong>{((this.props.roomArrangement) + ' · ' + (this.props.city)).toUpperCase()}</strong></span></div>
           <div><strong>{this.props.listingTitle}</strong></div>
           <div><span id='pricing'>{'$' + this.props.nightlyPrice + ' per night'}</span></div>
             <div>
