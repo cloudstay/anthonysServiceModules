@@ -44,8 +44,8 @@ class App extends React.Component {
           <TheNeighborhood neighborhoodInfo={this.state.listing.neighborhoodInfo} city={this.state.listing.city}/>
           <Policies selfCheckIn={this.state.listing.selfCheckIn} checkInTime={this.state.listing.checkInTime} smoking={this.state.listing.smoking} parties={this.state.listing.parties} pets={this.state.listing.pets} securityDeposit={this.state.listing.securityDeposit} depositAmount={this.state.listing.depositAmount}/>
           <Cancelations policyDiagram={this.state.listing.policyDiagram}/>
-          {/* <RelatedHomes listings={this.state.relatedListings}/> */}
-          {/* <ThingsToDo thingsToDo={this.state.thingsToDo}/> */}
+          <RelatedHomes listings={this.state.relatedListings} city={this.state.listing.city}/>
+          <ThingsToDo thingsToDo={this.state.thingsToDo}/>
           <Explore city={this.state.listing.city}/> 
         </div>
       )
