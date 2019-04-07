@@ -39,7 +39,7 @@ class App extends React.Component {
     render(){
       return(
         <div>
-          <HostedBy hostName={this.state.listing.hostName} city={this.state.listing.city} memberSince={this.state.listing.memberSince} isVerified={this.state.listing.isVerified} numOfReviews={this.state.listing.numOfReviews} hostInfo={this.state.listing.hostInfo} languages={this.state.listing.languages} responseRate={this.state.listing.responseRate} responseTime={this.state.listing.responseTime}/>
+          <HostedBy hostName={this.state.listing.hostName} hostImage={this.state.listing.hostImage} city={this.state.listing.city} memberSince={this.state.listing.memberSince} isVerified={this.state.listing.isVerified} numOfReviews={this.state.listing.numOfReviews} hostInfo={this.state.listing.hostInfo} languages={this.state.listing.languages} responseRate={this.state.listing.responseRate} responseTime={this.state.listing.responseTime}/>
           <Communications/>
           <TheNeighborhood neighborhoodInfo={this.state.listing.neighborhoodInfo} city={this.state.listing.city}/>
           <Policies selfCheckIn={this.state.listing.selfCheckIn} checkInTime={this.state.listing.checkInTime} smoking={this.state.listing.smoking} parties={this.state.listing.parties} pets={this.state.listing.pets} securityDeposit={this.state.listing.securityDeposit} depositAmount={this.state.listing.depositAmount}/>
@@ -47,6 +47,7 @@ class App extends React.Component {
           <RelatedHomes listings={this.state.relatedListings} city={this.state.listing.city}/>
           <ThingsToDo thingsToDo={this.state.thingsToDo}/>
           <Explore city={this.state.listing.city}/> 
+          <div className='line-break-long'></div>
         </div>
       )
     }
