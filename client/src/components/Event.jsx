@@ -4,24 +4,49 @@ class Event extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-
+      favorite: false
     }
+    this.toggleFavorite = this.toggleFavorite.bind(this);
 }
 
+toggleFavorite(){
+  this.setState({
+    favorite: this.state.favorite ? false : true
+  })
+}
+
+
     render(){
-      return(
-        <div id='eventContainer'>
-          <div id='listingImgContainer'><img className='listingImg' src={this.props.eventImg}></img></div>
-          <div id='eventInfoContainer'>
-            <div><span id='eventType'><strong>{(this.props.eventCategory).toUpperCase()}</strong></span></div>
-            <div><strong>{this.props.eventName}</strong></div>
-            <div><span id='pricing'>{'$' + this.props.price + ' per person'}</span></div>
-            <div>
-              <div><span id='reviewsAvg'><strong>{this.props.ratingAvg}</strong></span><span id='carouselStar'></span><span id='reviews'>{' (' + this.props.numOfRatings + ') '}</span></div>
+
+      if (this.state.favorite === false){
+        return(
+          <div id='eventContainer'>
+            <div id='listingImgContainer'><img className='listingImg' src={this.props.eventImg}></img><img onClick={this.toggleFavorite} className='heart' src='../../../public/images/emptyHeart.svg' ></img></div>
+            <div id='eventInfoContainer'>
+              <div><span id='eventType'><strong>{(this.props.eventCategory).toUpperCase()}</strong></span></div>
+              <div><strong>{this.props.eventName}</strong></div>
+              <div><span id='pricing'>{'$' + this.props.price + ' per person'}</span></div>
+              <div>
+                <div><span id='reviewsAvg'><strong>{this.props.ratingAvg}</strong></span><span id='carouselStar'></span><span id='reviews'>{' (' + this.props.numOfRatings + ') '}</span></div>
+              </div>
             </div>
           </div>
-        </div>
-      )
+        )
+      } else {
+        return(
+          <div id='eventContainer'>
+            <div id='listingImgContainer'><img className='listingImg' src={this.props.eventImg}></img><img onClick={this.toggleFavorite} className='heart' src='../../../public/images/redHeart.svg' ></img></div>
+            <div id='eventInfoContainer'>
+              <div><span id='eventType'><strong>{(this.props.eventCategory).toUpperCase()}</strong></span></div>
+              <div><strong>{this.props.eventName}</strong></div>
+              <div><span id='pricing'>{'$' + this.props.price + ' per person'}</span></div>
+              <div>
+                <div><span id='reviewsAvg'><strong>{this.props.ratingAvg}</strong></span><span id='carouselStar'></span><span id='reviews'>{' (' + this.props.numOfRatings + ') '}</span></div>
+              </div>
+            </div>
+          </div>
+        )
+      }
     }
 }
 
