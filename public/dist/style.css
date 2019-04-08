@@ -208,11 +208,19 @@ a.linkExplore:hover {
       height: 100%;
 }
 
+.heart {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    height: 30px;
+    width: 30px;
+}
+
 #listingType {
     color: rgb(0, 0, 71);
     font-size: 12px;
     font-weight: 500;
-   }
+}
 
 #listingContainer {
     cursor: pointer;
@@ -259,6 +267,7 @@ a.linkExplore:hover {
     padding: 0;
     position: relative;
     transform: translateX(33%);
+    /* transition: 0.2s ease-out 0s, 0.2s ease-out 0s, 0.2s ease-out 0s !important; */
   }
 
 #carouselItem {
