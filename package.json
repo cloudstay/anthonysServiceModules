@@ -23,6 +23,8 @@
     "body-parser": "^1.18.3",
     "bootstrap": "^4.3.1",
     "cors": "^2.8.5",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
     "express": "^4.16.4",
     "google-maps-react": "^2.0.2",
     "install": "^0.12.2",
