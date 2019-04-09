@@ -22,15 +22,16 @@ class App extends React.Component {
     }
 
     componentDidMount(){
+        var listing_Id=window.location.search.slice(4,7);
         $.ajax({
-            url: 'http://localhost:3001/api/listings',
+            url: '/rooms/api/',
             type: 'GET',
+            data: {id: listing_Id},
             success: (data) => {
-                var randomNum = Math.floor(Math.random() * Math.floor(100));
                 this.setState({
-                    listing: data[randomNum],
-                    relatedListings: data[randomNum].relatedHomes,
-                    thingsToDo: data[randomNum].thingsToDo
+                    listing: data[0],
+                    relatedListings: data[0].relatedHomes,
+                    thingsToDo: data[0].thingsToDo
                 })
             }
         })
