@@ -21,7 +21,7 @@ toggleFavorite(){
       if (this.state.favorite === false){
         return(
           <div id='eventContainer'>
-            <div id='listingImgContainer'><img className='listingImg' src={this.props.eventImg}></img><img onClick={this.toggleFavorite} className='heart' src='../../../public/images/emptyHeart.svg' ></img></div>
+            <div id='listingImgContainer'><img className='listingImg' src={this.props.eventImg}></img><div onClick={this.toggleFavorite} className='heart' id='emptyHeart' ></div></div>
             <div id='eventInfoContainer'>
               <div><span id='eventType'><strong>{(this.props.eventCategory).toUpperCase()}</strong></span></div>
               <div><strong>{this.props.eventName}</strong></div>
@@ -35,7 +35,7 @@ toggleFavorite(){
       } else {
         return(
           <div id='eventContainer'>
-            <div id='listingImgContainer'><img className='listingImg' src={this.props.eventImg}></img><img onClick={this.toggleFavorite} className='heart' src='../../../public/images/redHeart.svg' ></img></div>
+            <div id='listingImgContainer'><img className='listingImg' src={this.props.eventImg}></img><div onClick={this.toggleFavorite} className='heart' id='redHeart' ></div></div>
             <div id='eventInfoContainer'>
               <div><span id='eventType'><strong>{(this.props.eventCategory).toUpperCase()}</strong></span></div>
               <div><strong>{this.props.eventName}</strong></div>
