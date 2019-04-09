@@ -9,7 +9,7 @@ class Explore extends React.Component {
     }
 }
 
-    render(){
+    render() {
       return(
         <div>
           <h2>Explore other options in and around {this.props.city}</h2>
