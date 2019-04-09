@@ -6,9 +6,11 @@ const bodyParser = require('body-parser');
 const db = require('../database/index.js');
 
 
-server.use(express.static('./public/dist'));
+server.use('/rooms/', express.static('./public'));
 server.use(bodyParser.json());
-server.use(bodyParser.urlencoded());
+server.use(bodyParser.urlencoded({
+  extended: true
+}));
 server.use(cors());
 
  
@@ -21,12 +23,16 @@ server.listen(port, () => {
 //create routes here
 
 
-server.get('/api/listings', (req, res) => {
+server.get('/rooms/api/', (req, res) => {
   console.log('a get request has been made');
-  var handleData = (data) => {
-    res.send(data)
-  }
-  db.getData(handleData);
+  var id = req.query.id;
+  db.getData(id, (error, data)=>{
+    if (error){
+      console.log(error);
+    } else {
+      res.send(data);
+    }
+  });
 });
 
 
@@ -34,8 +40,12 @@ server.get('/api/listings', (req, res) => {
 
 server.get('/api/testing', (req, res) => {
   console.log('a get request has been made');
-  var handleData = (data) => {
-    res.send(data)
-  }
-  db.getData(handleData);
+  var id = req.params.id;
+  db.getData(id, (error, data)=>{
+    if (error){
+      console.log(error);
+    } else {
+      res.send(data);
+    }
+  });
 });
