@@ -379,13 +379,9 @@ var seedData = () => {
   }
 
 
-getData = (callback) => {
-  InfoModel.find({}, (error, data) => {
-    if (error) {
-      console.log(error);
-    } else {
-      callback(data);
-    }
+getData = (id, callback) => {
+  InfoModel.find({listing_id: id}, (error, data) => {
+      callback(error, data);
   });
 }
 
