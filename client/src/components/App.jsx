@@ -22,12 +22,13 @@ class App extends React.Component {
     }
 
     componentDidMount(){
-        var listing_Id=window.location.search.slice(4,7);
+        var listing_Id=window.location.pathname.split('/')[2];
         $.ajax({
-            url: '/rooms/api/',
+            url: `/api/rooms/${listing_Id}/info`,
             type: 'GET',
             data: {id: listing_Id},
             success: (data) => {
+                data = JSON.parse(data);
                 this.setState({
                     listing: data[0],
                     relatedListings: data[0].relatedHomes,

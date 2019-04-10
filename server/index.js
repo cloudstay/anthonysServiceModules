@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const db = require('../database/index.js');
 
 
-server.use('/rooms/', express.static('./public'));
+server.use('/rooms/:id', express.static('./public'));
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({
   extended: true
@@ -23,14 +23,15 @@ server.listen(port, () => {
 //create routes here
 
 
-server.get('/rooms/api/', (req, res) => {
+server.get('/api/rooms/:id/info', (req, res) => {
   console.log('a get request has been made');
-  var id = req.query.id;
+  var id = req.params.id;
   db.getData(id, (error, data)=>{
+    console.log(JSON.stringify(data))
     if (error){
       console.log(error);
     } else {
-      res.send(data);
+      res.send(JSON.stringify(data));
     }
   });
 });
