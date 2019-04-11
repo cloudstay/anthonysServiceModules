@@ -22,8 +22,7 @@ class HostedBy extends React.Component {
     render(){
       if (this.props.isVerified){
         return(
-          <div >
-            <div className='line-break'></div>
+          <div>
             <div id='hostInfoHeaderContainer'>
             <div id='headingContainer'>
                 <h2 id='hostedByHostName'>Hosted by {this.props.hostName}</h2>
@@ -47,7 +46,6 @@ class HostedBy extends React.Component {
       } else {
         return (
           <div >
-            <div className='line-break'></div>
             <div id='hostInfoHeaderContainer'>
               <div id='headingContainer'>
                 <h2 id='hostedByHostName'>Hosted by {this.props.hostName}</h2>
