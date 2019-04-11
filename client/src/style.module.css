@@ -1,7 +1,7 @@
 /* for entire page and reusable styles */
 
 
-body {
+#info {
     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
     display: inline;
     font-size: 15px;
@@ -282,6 +282,7 @@ a.linkExplore:hover {
     display: flex;
     position: relative;
     padding-left: 0px;
+    margin-left: -35px;
 }
 
 #leftArrowContainer {
